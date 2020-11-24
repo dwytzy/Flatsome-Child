@@ -151,6 +151,38 @@ li.cart-item.has-icon {
     display: grid;
     grid-template-columns: 20% 60% 20%;
 }
+.custom-page .main-buttons .menu a{
+	color: #000;
+	border-radius: 5px;
+    display: block;
+    font-size: 1.3em;
+    letter-spacing: .03em;
+    cursor: pointer;
+    font-weight: bolder;
+    text-align: center;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3vh;
+	text-decoration: none;
+    border: 1px solid transparent;
+    vertical-align: middle;
+    text-shadow: none;
+    line-height: 2.4em;
+    min-height: 2.5em;
+    padding: 0 1.2em;
+	text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.22);
+    transition: transform .3s, box-shadow .3s, background-color .3s, color .3s, opacity .3s;
+}
+.custom-page .main-buttons .menu a:hover{
+	background-color: #cacaca;
+	transform: translateY(-6px);
+	outline: none;
+    opacity: 1;
+    color: #fff;
+}
 /************************************************************************************************** ADD MOBILE ONLY CSS HERE  ******************************************************************************************/
 /* LARGE SCREEN DESKTOPS */
 @media all and (max-width: 1330px) and (min-width: 850px) {
