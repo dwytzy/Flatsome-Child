@@ -9,7 +9,10 @@ get_header();
 
 <div class="row page-wrapper">
 <div id="content" class="large-12 col" role="main">
-
+	<section class="submenus-sc">
+		
+	</section>
+	<section class="main-content">
 		<?php while ( have_posts() ) : the_post(); ?>
 					<header class="entry-header text-center">
 						<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -25,8 +28,10 @@ get_header();
 
 
 		<?php endwhile; // end of the loop. ?>
-		<p>testing</p>
-		<p>section</p>
+	</section>
+	<section class="main-buttons">
+
+	</section>
 
 </div>
 </div>
