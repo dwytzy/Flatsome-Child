@@ -148,8 +148,8 @@ li.cart-item.has-icon {
 }
 /* CUSTOM PAGE - menu/content/home-btns */
 .custom-page{
-	display: flex;
-	flex-flow: row wrap;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
 }
 /************************************************************************************************** ADD MOBILE ONLY CSS HERE  ******************************************************************************************/
 /* LARGE SCREEN DESKTOPS */

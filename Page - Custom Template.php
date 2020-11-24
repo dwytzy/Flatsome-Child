@@ -17,7 +17,6 @@ get_header();
 		?>
 	</section>
 	<section class="main-content">
-		<p>Main Content</p>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<header class="entry-header text-center">
 				<h1 class="entry-title"><?php the_title(); ?></h1>

@@ -16,7 +16,7 @@ function add_viewport_meta_tag() {
 
 //Register Navigation
 function dz_action_menu() {
-	register_nav_menu('dz-side-menu',__( 'Home Menus' ));
+	register_nav_menu('dz-side-menu',__( 'Side Menus' ));
 	register_nav_menu('dz-subs-menu',__( 'Sub sub Menus' ));
 }
 add_action( 'init', 'dz_action_menu' );
