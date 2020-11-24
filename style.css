@@ -146,6 +146,11 @@ li.cart-item.has-icon {
 .commercial-sc .custom-banner-txtbox {
     right: 5%;
 }
+/* CUSTOM PAGE - menu/content/home-btns */
+.custom-page{
+	display: flex;
+	flex-flow: row wrap;
+}
 /************************************************************************************************** ADD MOBILE ONLY CSS HERE  ******************************************************************************************/
 /* LARGE SCREEN DESKTOPS */
 @media all and (max-width: 1330px) and (min-width: 850px) {
