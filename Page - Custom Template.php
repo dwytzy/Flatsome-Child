@@ -7,33 +7,31 @@ get_header();
 
 <?php do_action( 'flatsome_before_page' ); ?>
 
-<div class="row page-wrapper">
-<div id="content" class="large-12 col" role="main">
+<div class="custom-page">
 	<section class="submenus-sc">
-		
+		<p>Submenu Section</p>
 	</section>
 	<section class="main-content">
+		<p>Main Content</p>
 		<?php while ( have_posts() ) : the_post(); ?>
-					<header class="entry-header text-center">
-						<h1 class="entry-title"><?php the_title(); ?></h1>
-						<div class="is-divider medium"></div>
-					</header>
+			<header class="entry-header text-center">
+				<h1 class="entry-title"><?php the_title(); ?></h1>
+				<div class="is-divider medium"></div>
+			</header>
 
-					<div class="entry-content">
-						<?php the_content(); ?>
+			<div class="entry-content">
+				<?php the_content(); ?>
 
-						<?php if ( comments_open() || '0' != get_comments_number() ){
-							comments_template(); } ?>
-					</div>
+				<?php if ( comments_open() || '0' != get_comments_number() ){
+					comments_template(); } ?>
+			</div>
 
 
 		<?php endwhile; // end of the loop. ?>
 	</section>
 	<section class="main-buttons">
-
+		<p>Button Section
 	</section>
-
-</div>
 </div>
 
 <?php do_action( 'flatsome_after_page' ); ?>
