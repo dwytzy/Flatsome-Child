@@ -26,6 +26,7 @@ get_header();
 
 		<?php endwhile; // end of the loop. ?>
 		<p>testing</p>
+		<p>section</p>
 
 </div>
 </div>
