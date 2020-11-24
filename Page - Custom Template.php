@@ -9,7 +9,12 @@ get_header();
 
 <div class="custom-page">
 	<section class="submenus-sc">
-		<p>Submenu Section</p>
+		<?php
+		wp_nav_menu( array( 
+		    'theme_location' => 'dz-subs-menu',
+		    'container'		 => '', 
+		    'container_class' => 'subs-menu' ) ); 
+		?>
 	</section>
 	<section class="main-content">
 		<p>Main Content</p>
@@ -30,7 +35,12 @@ get_header();
 		<?php endwhile; // end of the loop. ?>
 	</section>
 	<section class="main-buttons">
-		<p>Button Section
+		<?php
+		wp_nav_menu( array( 
+		    'theme_location' => 'dz-side-menu',
+		    'container'		 => '', 
+		    'container_class' => 'footer-menu' ) ); 
+		?>
 	</section>
 </div>
 
