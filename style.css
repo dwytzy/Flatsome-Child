@@ -1,0 +1,354 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/*
+Theme Name: Flatsome Child
+Description: This is a child theme for Flatsome Theme
+Author: UX Themes
+Template: flatsome
+Version: 3.0
+*/
+
+/*************** ADD CUSTOM CSS HERE.   ***************/
+html{
+	
+}
+#logo img {
+		padding: 10px 0;
+}
+.logo a.phone-tagline {
+    font-family: 'Lato';
+    font-weight: normal;
+    font-style: italic;
+    font-size: 1em;
+    /* color: #777; */
+    font-family: 'Lato';
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.home-btn {
+	color: #000;
+    display: block;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+	margin-bottom: 3vh;
+}
+.home-logo{
+		max-width: 200px;
+		margin: 0 auto;
+}
+.home-logo .img-inner{
+	text-align: center;
+}
+
+.header-main #logo.logo {
+	width: 100%;
+}
+div#wrapper { /* homepage wrapper */
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+	padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+#main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: flex-start;
+        -ms-flex-pack: flex-start;
+            justify-content: flex-start;
+}
+.home #main{
+	 -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.form-container{
+	display:none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: #fff;
+}
+.home #content .row.form-container.show{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	padding: 0 15px;
+}
+.form-container .form-wrap{
+    max-width: 650px;
+    background: #fff;
+    border: 1px solid rgb(125 125 125 / 39%);
+    border-radius: 10px;
+    box-shadow: 0px 2px 9px rgb(0 0 0 / 16%);
+	padding: 30px;
+    padding-top: 60px;
+}
+.form-container .form-wrap .col-inner {
+    position: unset;
+}
+.form-container .close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+    border-radius: 0 8px 0 0;
+}
+.form-container form {
+    margin-bottom: 0;
+}
+li.cart-item.has-icon {
+    display: none;
+}
+.blog-wrapper .entry-image {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.mobile-nav .button {
+    color: #000;
+}
+
+/* ACCORDIONS */
+.accordion-sc {
+    border: 1px solid #dddddd;
+    border-radius: 0 0 8px 8px;
+}
+.accordion-sc .accordion-inner .img{
+	max-width: 350px;
+}
+.accordion-sc .grid-item .accordion-inner .img {
+    grid-row: 1 / span 2;
+}
+/* CUSTOM BANNERS */
+.custom-banner-txtbox {
+    max-width: 60%;
+}
+.residential-sc .custom-banner-txtbox {
+    left: 5%;
+}
+.commercial-sc .custom-banner-txtbox {
+    right: 5%;
+}
+/************************************************************************************************** ADD MOBILE ONLY CSS HERE  ******************************************************************************************/
+/* LARGE SCREEN DESKTOPS */
+@media all and (max-width: 1330px) and (min-width: 850px) {
+
+
+}
+@media all and (max-width: 992px) and (min-width: 850px) {
+	.header-main .flex-col {
+		-webkit-box-flex: 1;
+		    -ms-flex: auto;
+		        flex: auto;
+	}
+	.form-container .form-wrap{
+		max-width: 80%;
+	}
+}
+@media all and (max-width: 992px){
+	.custom-banner-txtbox {
+    	max-width: 75%;
+	}
+	.residential-sc .custom-banner-txtbox,
+	.commercial-sc .custom-banner-txtbox{
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+}
+/* FOR IPAD AND TAB SIZES */
+@media all and (max-width: 849px){ /* default tab width of theme */
+	.header-top {
+		display: none;
+	}
+	.home #content .row { /* homepage main content wrapper */
+		display: -ms-grid;
+		display: grid;
+		-ms-grid-rows: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		height: 100%;
+		width: 100%;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+	}
+	.home #content .row.form-container{
+		display: none;
+	}
+}
+@media all and (min-height: 1024px) and (max-height: 1024px) and (min-width: 768px) and (max-width: 768px) and (orientation: portrait){ /* IPAD PORTRAIT */
+	.home .col {
+		padding-bottom: 0;
+	}
+
+}
+@media all and (min-width: 1024px) and (min-height: 768px) and (orientation: landscape){ /* IPAD LANDSCAPE */
+	.home-logo img{
+		max-width: 80%;
+	}
+
+}
+/* FOR IPHONE DEVICES */
+@supports (-webkit-touch-callout: none) { /* target iphone only */
+	@media all and (max-width: 500px){
+		.home div#wrapper{
+			height:auto;
+		}
+	}
+	@media all and (max-width: 390px) and (max-height: 844px){ /* IPHONE 12 and 12 Pro */}	
+	@media all and (max-width: 428px) and (max-height: 926px){ /* IPHONE 12 PRO MAX */}
+	@media all 
+	and (min-width: 414px)
+	and (max-width: 414px)
+	and (min-height: 736px)
+	and (max-height: 736px){ /* IPHONE 6/7/8  PLUS */
+		.home div#wrapper{
+			height: 600px;
+		}
+	}
+	@media all and 
+	(min-width: 414px) and
+	(max-width: 414px) and 
+	(min-height: 896px) and
+	(max-height: 896px){ /* IPHONE Xr/ Xs Max / 11 / 11 PRO MAX working */
+		.home div#wrapper{
+			/*height: 712px;*/
+		}
+	}
+	@media all 
+	and (min-width: 375px)
+	and (max-width: 375px)
+	and (min-height: 667px)
+	and (max-height: 667px){ /* IPHONE 6/7/8  working */
+		.home div#wrapper{
+			height: 559px;
+		}
+		.home-logo .img-inner{
+			text-align: center;
+		}
+		.home-logo img{
+			width: 80%;
+		}
+	}
+	@media all
+	and (min-width: 374px)
+	and (max-width : 375px) 
+	and (min-height: 812px)
+	and (max-height : 812px) { /* IPHONE X / XS / 11 PRO working */
+		.home div#wrapper{
+			height: 633px;
+		}
+
+	}
+	@media (max-width: 320px) and (max-height:568px){ /* IPHONE 5 / SE - old */
+		.logo a{
+			font-size: 20px;
+		}
+		.home-logo img {
+			width: 60%;
+		}
+		.home-btn {
+			margin-bottom: 2vh;
+		}
+	}
+}
+/* FOR ALL OTHER DEVICES */
+@media all and (max-width: 768px){
+	.logo a.phone-tagline {
+		font-size: 24px;
+	}
+
+}
+@media all and (max-width: 500px){
+	.home-btn{
+		max-width: 250px;
+	}
+}
+
+
+
+@media all and (max-width: 500px){
+	.home #content .row {
+		-ms-grid-rows: auto;
+		grid-template-rows: auto;
+		/*grid-gap: 20px;
+		max-height:calc(100% - 40px);*/
+	}
+	.form-container .form-wrap {
+		padding: 15px;
+	}
+}
+@media all and (max-width: 414px){
+	.home-logo img {
+		width: 60%;
+	}
+	.logo a{
+		font-size: 28px;
+	}
+	.home-btn.is-larger {
+		font-size: 1.1em;
+	}
+}
+
+
+@media only screen and (max-width : 375px){
+	.logo a{
+		font-size: 26px;
+	}
+	.home-btn.is-larger {
+		font-size: 16px;
+	}
+}
+
+
+@media (max-width: 370px){
+	.home-logo {
+		/*padding: 2vh 0;*/
+	}
+	.home-logo img{
+		width: 80%;
+	}
+	.home .btns-wrap {
+		padding-bottom: 0;
+	}
+}
+
+@media (max-width: 355px){
+	.home-logo img {
+		width: 60%;
+	}
+	.logo a{
+		font-size: 24px;
+	}
+	.custom-banner-txtbox {
+    	max-width: 85%;
+	}
+	.custom-banner-txtbox .banner h2{
+		font-size: 2em;
+	}
+}
+@media (max-width: 320px) and (max-height:568px){ /* IPHONE 5 / SE - old */
+		.logo a{
+			font-size: 20px;
+		}
+		.home-btn.is-larger {
+			font-size: 14px;
+		}
+	}
