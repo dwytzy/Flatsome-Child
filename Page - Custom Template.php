@@ -34,6 +34,7 @@ get_header();
 		<?php endwhile; // end of the loop. ?>
 	</section>
 	<section class="main-buttons">
+		<?php echo get_custom_logo(); ?>
 		<?php
 		wp_nav_menu( array( 
 		    'theme_location' => 'dz-side-menu',

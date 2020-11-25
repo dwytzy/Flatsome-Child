@@ -20,3 +20,11 @@ function dz_action_menu() {
 	register_nav_menu('dz-subs-menu',__( 'Sub sub Menus' ));
 }
 add_action( 'init', 'dz_action_menu' );
+
+function config_custom_logo() {
+        
+    add_theme_support( 'custom-logo' );
+
+}
+
+add_action( 'after_setup_theme' , 'config_custom_logo' );

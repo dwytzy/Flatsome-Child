@@ -149,10 +149,18 @@ li.cart-item.has-icon {
 /* CUSTOM PAGE - menu/content/home-btns */
 .custom-page{
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+	grid-template-columns: 19% 57% 19%;
+    height: 100%;
+    grid-gap: 20px;
+    padding: 0 20px;
 }
-.custom-page .main-buttons .menu a{
+.custom-page .menu li {
+    border: none;
+    margin: 0;
+}
+.custom-page .menu a{
 	color: #000;
+	background-color: #cacaca;
 	border-radius: 5px;
     display: block;
     font-size: 1.3em;
@@ -170,18 +178,36 @@ li.cart-item.has-icon {
     text-shadow: none;
     line-height: 2.4em;
     min-height: 2.5em;
-    padding: 0 1.2em;
+    padding: 0;
 	text-rendering: optimizeLegibility;
     box-sizing: border-box;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.22);
     transition: transform .3s, box-shadow .3s, background-color .3s, color .3s, opacity .3s;
 }
-.custom-page .main-buttons .menu a:hover{
+.custom-page .menu a:hover{
 	background-color: #cacaca;
 	transform: translateY(-6px);
 	outline: none;
     opacity: 1;
     color: #fff;
+}
+section.main-buttons,
+section.submenus-sc{
+    flex-flow: column wrap;
+    display: grid;
+    grid-template-rows: 40% 60%;
+}
+.main-buttons .custom-logo-link {
+    justify-self: center;
+    align-self: center;
+	text-align: center;
+}
+.custom-page .menu {
+    grid-row: 2;
+	margin: 0;
+}
+section.main-buttons img {
+    max-width: 200px;
 }
 /************************************************************************************************** ADD MOBILE ONLY CSS HERE  ******************************************************************************************/
 /* LARGE SCREEN DESKTOPS */
@@ -199,6 +225,18 @@ li.cart-item.has-icon {
 		max-width: 80%;
 	}
 }
+@media all and (max-width: 1080px){
+	section.main-buttons img{
+		width: 80%;
+	}
+	.custom-page .menu a{
+		font-size: 1em;
+	}
+}
+@media all and (max-width: 1080px) and (min-width: 992px){
+	
+	
+}
 @media all and (max-width: 992px){
 	.custom-banner-txtbox {
     	max-width: 75%;
@@ -208,6 +246,25 @@ li.cart-item.has-icon {
 		left: 0;
 		right: 0;
 		margin: 0 auto;
+	}
+}
+@media all and (max-width: 991px){
+	.custom-page {
+		grid-template-columns: 70% 27%;
+	}
+	section.submenus-sc {
+		grid-row: 2;
+		display: flex;
+    	grid-column: 2;
+	}
+	section.main-content {
+		grid-column: 1;
+		grid-row: 1 / span 3;
+	}
+	section.main-buttons {
+		grid-column: 2;
+		display: flex;
+    	justify-content: space-between;
 	}
 }
 /* FOR IPAD AND TAB SIZES */
@@ -242,6 +299,7 @@ li.cart-item.has-icon {
 	}
 
 }
+
 /* FOR IPHONE DEVICES */
 @supports (-webkit-touch-callout: none) { /* target iphone only */
 	@media all and (max-width: 500px){
@@ -311,17 +369,32 @@ li.cart-item.has-icon {
 	.logo a.phone-tagline {
 		font-size: 24px;
 	}
-
-}
-@media all and (max-width: 500px){
-	.home-btn{
-		max-width: 250px;
+	.inner-banner {
+    	padding: 0 !important;
+		height: 25vh;
 	}
 }
-
-
-
+@media all and (max-width: 720px){
+	.custom-page .menu a {
+		font-size: 14px;
+	}
+}
+@media all and (max-width: 540px){
+	.mobile-nav .button{
+		padding: 0 5px;
+	}
+	.header-main #logo.logo {
+		padding: 5px 0;
+	}
+	.custom-banner-txtbox {
+		max-width: 90%;
+	}
+}
 @media all and (max-width: 500px){
+	.home-btn,
+	.custom-page .menu a{
+		max-width: 250px;
+	}
 	.home #content .row {
 		-ms-grid-rows: auto;
 		grid-template-rows: auto;
@@ -330,6 +403,23 @@ li.cart-item.has-icon {
 	}
 	.form-container .form-wrap {
 		padding: 15px;
+	}
+	.custom-page {
+		grid-template-columns: 100%;
+	}
+	section.main-buttons {
+		grid-row: 1;
+		grid-column: 1;
+	}
+	section.main-content {
+		grid-row: 2;
+	}
+	section.submenus-sc {
+		grid-row: 3;
+		grid-column: 1;
+	}
+	.main-buttons .custom-logo-link{
+		margin: 10px auto;
 	}
 }
 @media all and (max-width: 414px){
