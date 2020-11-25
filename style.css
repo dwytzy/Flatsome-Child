@@ -196,6 +196,7 @@ section.submenus-sc{
     flex-flow: column wrap;
     display: grid;
     grid-template-rows: 40% 60%;
+    max-height: 100vh;
 }
 .main-buttons .custom-logo-link {
     justify-self: center;
