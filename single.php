@@ -16,14 +16,6 @@ if(flatsome_option('pages_template') != 'default') {
 
 get_header();
 do_action( 'flatsome_before_page' ); ?>
-<section class="submenus-sc">
-		<?php
-		wp_nav_menu( array( 
-		    'theme_location' => 'dz-subs-menu',
-		    'container'		 => '', 
-		    'container_class' => 'subs-menu' ) ); 
-		?>
-	</section>
 <div id="content" class="content-area page-wrapper" role="main">
 	<div class="row row-main">
 		<div class="large-12 col">
@@ -49,7 +41,36 @@ do_action( 'flatsome_before_page' ); ?>
 		</div>
 	</div>
 </div>
-<section class="main-buttons">
+
+<div class="custom-page">
+	<section class="submenus-sc">
+		<?php
+		wp_nav_menu( array( 
+		    'theme_location' => 'dz-subs-menu',
+		    'container'		 => '', 
+		    'container_class' => 'subs-menu' ) ); 
+		?>
+	</section>
+	<section class="main-content">
+		<?php while ( have_posts() ) : the_post(); ?>
+			<?php if(get_theme_mod('default_title', 0)){ ?>
+				<header class="entry-header">
+					<h1 class="entry-title mb uppercase"><?php the_title(); ?></h1>
+				</header>
+				<?php } ?>
+
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php do_action( 'flatsome_before_page_content' ); ?>
+					
+						<?php the_content(); ?>
+
+						<?php if ( comments_open() || '0' != get_comments_number() ){
+							comments_template(); } ?>
+
+					<?php do_action( 'flatsome_after_page_content' ); ?>
+				<?php endwhile; // end of the loop. ?>
+	</section>
+	<section class="main-buttons">
 		<?php echo get_custom_logo(); ?>
 		<?php
 		wp_nav_menu( array( 
@@ -58,7 +79,7 @@ do_action( 'flatsome_before_page' ); ?>
 		    'container_class' => 'footer-menu' ) ); 
 		?>
 	</section>
-
+</div>
 <?php
 do_action( 'flatsome_after_page' );
 get_footer();
