@@ -21,24 +21,7 @@ do_action( 'flatsome_before_page' ); ?>
 		<div class="large-12 col">
 			<div class="col-inner">
 				
-				
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="custom-page">
-	<section class="submenus-sc">
-		<?php
-		wp_nav_menu( array( 
-		    'theme_location' => 'dz-subs-menu',
-		    'container'		 => '', 
-		    'container_class' => 'subs-menu' ) ); 
-		?>
-	</section>
-	<section class="main-content">
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php if(get_theme_mod('default_title', 0)){ ?>
+				<?php if(get_theme_mod('default_title', 0)){ ?>
 				<header class="entry-header">
 					<h1 class="entry-title mb uppercase"><?php the_title(); ?></h1>
 				</header>
@@ -54,17 +37,12 @@ do_action( 'flatsome_before_page' ); ?>
 
 					<?php do_action( 'flatsome_after_page_content' ); ?>
 				<?php endwhile; // end of the loop. ?>
-	</section>
-	<section class="main-buttons">
-		<?php echo get_custom_logo(); ?>
-		<?php
-		wp_nav_menu( array( 
-		    'theme_location' => 'dz-side-menu',
-		    'container'		 => '', 
-		    'container_class' => 'footer-menu' ) ); 
-		?>
-	</section>
+			</div>
+		</div>
+	</div>
 </div>
+
+
 <?php
 do_action( 'flatsome_after_page' );
 get_footer();
