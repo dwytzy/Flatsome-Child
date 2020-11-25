@@ -6,9 +6,6 @@
 
 <div class="custom-page">
 	<section class="submenus-sc">
-		<?php flatsome_sticky_column_open( 'blog_sticky_sidebar' ); ?>
-		<?php get_sidebar(); ?>
-		<?php flatsome_sticky_column_close( 'blog_sticky_sidebar' ); ?>
 		<?php
 		wp_nav_menu( array( 
 		    'theme_location' => 'dz-subs-menu',
